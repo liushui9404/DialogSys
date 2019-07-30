@@ -1,0 +1,183 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+ 
+    <category>
+        <pattern>* 在 哪 个 房 间</pattern>
+        <template>
+            <star index = "1"/>在#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 在 哪</pattern>
+        <template>
+            <star index = "1"/>在#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 在 哪 办 公</pattern>
+        <template>
+            <star index = "1"/>在#办公
+        </template>
+    </category>
+
+
+    
+
+    <category>
+        <pattern>* 在 哪 里</pattern>
+        <template>
+            <star index = "1"/>在#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 哪 层 *</pattern>
+        <template>
+            <star index = "1"/>#层<star index = "2"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 哪 层</pattern>
+        <template>
+            <star index = "1"/>#层
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 哪 栋</pattern>
+        <template>
+            <star index = "1"/>#栋<star index = "2"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 找 * 怎 样 走</pattern>
+        <template>
+            <star index = "2"/>在#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 学 生 * 谁</pattern>
+        <template>
+            <star index = "1"/>学生<star index="2"/>#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 学 生 * 哪 些</pattern>
+        <template>
+            <star index = "1"/>学生<star index="2"/>#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 研 究 方 向 *</pattern>
+        <template>
+            <star index = "1"/>研究方向是#
+        </template>
+    </category>
+
+        <category>
+        <pattern>* 研 究 *</pattern>
+        <template>
+            <star index = "1"/>研究方向是#
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>* 什 么 系 *</pattern>
+        <template>
+            <star index = "1"/>#的
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 系 *</pattern>
+        <template>
+            <star index = "1"/>的系是#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 性 别 是 *</pattern>
+        <template>
+            <star index = "1"/>性别是#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 性 别 是</pattern>
+        <template>
+            <star index = "1"/>性别是#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 职 称 是 *</pattern>
+        <template>
+            <star index = "1"/>职称是#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 是 * 的 *</pattern>
+        <template>
+            <star index = "1"/>是#的<star index = "3"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>介 绍 一 下 *</pattern>
+        <template>
+            <star index = "1"/>#
+        </template>
+    </category>
+
+    <category>
+        <pattern>帮 我 介 绍 一 下 *</pattern>
+        <template>
+            <star index = "1"/>#
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 学 术 报 告 *</pattern>
+        <template>
+            <star index = "1"/>学术报告<star index = "2"/>是#
+        </template>
+    </category>
+
+    <category>
+        <pattern>机 电 工 程 学 院 有 多 少 *</pattern>
+        <template>
+            机电工程学院有#<star index = "1"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>机 电 学 院 有 多 少 *</pattern>
+        <template>
+            机电学院有#<star index = "1"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>机 电 院 有 多 少 *</pattern>
+        <template>
+            机电院有#<star index = "1"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>机 电 工 程 学 院 历 史</pattern>
+        <template>
+            机工程学院历史:#
+        </template>
+    </category>
+
+</aiml>

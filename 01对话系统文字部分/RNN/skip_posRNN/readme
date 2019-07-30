@@ -1,0 +1,4 @@
+先运行main.py的test_data，得到相关数据，再运行main.py里的train()
+dictionary_words为词典，keys为词，values为数字，这个要使用python3生成，否则会有编码问题
+embeddings里面保存了词向量矩阵，其排列顺序与词典中顺序一致，第0行代表词典中0表示的词的词向量,也要用python3生成
+dictionary_words是训练词向量时的词典，要用python3运行，或者对pyyhon2的编码进行强制设置成utf-8(设想，没验证)

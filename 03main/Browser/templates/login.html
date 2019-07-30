@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>界面--刘通</title>
+        <link rel="stylesheet" href="../static/speech-input.css"> 
+    <script>
+    function clearinput()
+    {
+        document.getElementById('input1').value="";
+        
+    }
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+    body {
+	background-image: url(../static/%E8%83%8C%E6%99%AF.jpg);
+	background-repeat: no-repeat;
+}
+	p {
+	margin:0;
+	}
+	.solve{
+		position:absolute;
+		left:10px;
+		top:400px;
+	}
+	.clear{
+		position:absolute;
+		left:100px;
+		top:400px;
+	}
+	.textarea3{
+		position:absolute;
+		top:209px;
+	}
+    </style>
+    </head>
+   
+<body>
+    <form method="POST" action='solve'>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;校园信息服务人机对话系统</h1>
+        <p><strong style="font-size:16px" >输入&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答</strong> </p>
+        <p>
+<textarea class="speech-input" id = "input1" name = "textinput1" rows="2" cols="30" placeholder="请输入您的问题，然后点击完成输入" ></textarea>
+                <textarea id = "output1" name = "textoutput1" rows="2" cols="30" placeholder="此处显示回答"></textarea>
+                </p>
+                <h1>
+                <p><strong style="font-size: 16px" >日志</strong></p>
+                <textarea class = "textarea3" id = "output2" name = "textoutput2" rows="10" cols="64"></textarea>
+        </h1>
+                    
+        <h1></h1>
+        <h1></h1>
+        <input class = "solve" type="submit" value="完成输入">
+        <input class = "clear" type="button" value="清空输入" onclick="clearinput()"/> 
+        <!-- <button onclick="clearinput()">清空输入</button> -->
+    </form>
+    <script src="../static/speech-input.js"></script>
+    <script src="../static/buttons.js"></script>
+</body>
+</html>

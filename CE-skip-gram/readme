@@ -1,0 +1,2 @@
+1、运行lt_word2vec.py训练词向量
+2、运行gen_embeddings.py生成训练好的词向量

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>界面--刘通</title>
+        <link rel="stylesheet" href="../static/speech-input.css"> 
+    <script>
+    function clearinput()
+    {
+        document.getElementById('input1').value="";
+        
+    }
+	function clearAndSave()
+    {
+        document.getElementById('input1').value="";
+        document.getElementById('output1').value="";
+            
+            // var content = document.getElementById('output2').value;
+            
+            // var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+            // var filename;
+            
+            // filename = String(Date());
+            // var lastindex = filename.lastIndexOf('G');
+            // filename = filename.substring(0,lastindex-1);
+            // filename+=".txt"
+            // saveAs(blob, filename);
+        alert("对话已保存本地");
+            // document.getElementById('output2').value="";
+
+    }
+
+    function doTTS() {
+            var ttsDiv = document.getElementById('bdtts_div_id');
+            var ttsAudio = document.getElementById('tts_autio_id');
+            var ttsText = document.getElementById('output1').value;
+            
+
+            // 文字转语音
+            ttsDiv.removeChild(ttsAudio);
+            var au1 = '<audio id="tts_autio_id" autoplay="autoplay">';
+            var sss = '<source id="tts_source_id" src="http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&per=3&spd=5&text=' + "" + '" type="audio/mpeg">';
+            var eee = '<embed id="tts_embed_id" height="0" width="0" src="">';
+            var au2 = '</audio>';
+            ttsDiv.innerHTML = au1 + sss + eee + au2;
+
+            ttsAudio = document.getElementById('tts_autio_id');
+
+            ttsAudio.play();
+        }
+
+    </script>
+
+    <div id="bdtts_div_id">
+        <audio id="tts_autio_id" autoplay="autoplay">
+        <source id="tts_source_id" src="http://tts.baidu.com/text2audio?lan=zh&amp;ie=UTF-8&amp;spd=6&amp;per=1&amp;text={{ x2 }}&amp" type="audio/mpeg">
+        <embed id="tts_embed_id" height="0" width="0" src="">
+        </audio>
+    </div>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+    body {
+	background-image: url(../static/%E8%83%8C%E6%99%AF.jpg);
+	background-repeat: no-repeat;}
+    
+	p {
+	margin:0;
+	}
+	.solve{
+		position:absolute;
+		left:10px;
+		top:400px;
+	}
+	.clear{
+		position:absolute;
+		left:100px;
+		top:400px;
+	}
+	.finish{
+		position:absolute;
+		left:200px;
+		top:400px
+	}
+	.textarea3{
+		position:absolute;
+		top:209px;
+	}
+
+    .img1{
+    position:absolute; 
+    left:550px; 
+    top:210px;
+	cursor: pointer;
+    transition: all 0.5s;
+    
+    }
+	
+	.img1:hover{
+	
+	position: absolute;
+	left:450px; 
+	top:250x;
+    transform: scale(3);
+    z-index:1;
+    }
+
+	.img2{
+    position:absolute; 
+    left:820px; 
+    top:210px;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+    }
+
+    .img2:hover{
+	position: absolute;
+	left:450px; 
+	top:250px; 
+    transform: scale(4);
+    z-index:1;
+    }
+	
+    </style>
+    </head>
+   
+<body>
+
+
+
+    <form method="POST" action=''>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;校园信息服务人机对话系统</h1>
+        <p><strong style="font-size:16px" >输入&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答</strong> </p>
+                <textarea class="speech-input" id = "input1" name = "textinput1" rows="2" cols="30" placeholder="请输入您的问题，然后点击完成输入" >{{ x1 }}</textarea>
+                <textarea id = "output1" name = "textoutput1" rows="2" cols="30" placeholder="此处显示回答">{{ x2 }}</textarea>
+                </p>
+                <h1>
+                <p><strong style="font-size: 16px" >日志</strong></p>
+                <!-- <textarea id = "output2" name = "textoutput2" rows="10" cols="64">{{ x3 }}</textarea> -->
+        </h1>
+                    
+                <h1></h1>
+                <h1></h1>
+                <input class="solve" type="submit" value="完成输入" onclick="doTTS()" >
+                <input class="clear" type="button" value="清空输入" onclick="clearinput()"/> 
+                <!-- <input type="button" value="结束对话" onclick="clearAndSave()"/>  -->
+                <!-- <button onclick="clearinput()">清空输入</button> -->
+    </form>
+
+    <form method="POST" action='/'>
+    	<textarea class="textarea3" id = "output2" name = "textoutput2" rows="10" cols="64" >{{ x3 }}</textarea>
+    	<input class= "finish" type="submit" value="结束对话" onclick="clearAndSave()" />
+    </form>
+
+    {% if intent=="query_location" and isShow=="1" %}
+        <img class = "img1" src="../static/写意图2.png" width="20%" >
+    {% endif %}
+
+<!--     {% if intent=="query_location" %}
+        <img src="/static/pic.png" width="70%" hight="70%">
+    {% endif %}  -->
+    <script src="./static/speech-input.js"></script>
+    <script src="./static/buttons.js"></script>        
+</body>
+</html>
